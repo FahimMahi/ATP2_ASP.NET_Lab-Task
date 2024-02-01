@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Projects";
+}
+
+<h2>My Projects</h2>
+
+<ul>
+    @*    <li>
+            <strong>Mental Health Counciling Management System</strong><br>
+            <strong>Course: Web Technologies</strong><br>
+            <strong>Programming Language: PHP, JS</strong><br>
+            <p>
+                The Mental Health Counseling Management System (MHCMS) is a technology-driven, effective platform designed to meet the growing need for mental health services.
+            </p>
+        </li>
+        <li>
+            <strong>Player Management System</strong><br>
+            <strong>Course: Object Oriented Programming 2 (C#)</strong><br>
+            <strong>Programming Language: C#</strong><br>
+            <p>
+                The Player Management System aims to create a centralized platform to efficiently manage and organize information related to players involved in a sports context.
+            </p>
+        </li>
+        <li>
+            <strong>Automatic Timetable Management System</strong><br>
+            <strong>Course: Object Oriented Programming 1 (JAVA)</strong><br>
+            <strong>Programming Language: JAVA</strong><br>
+            <p>
+                The Automatic Timetable Management System for University Course Registration is designed to streamline the course registration process and automatically generate timetables for students and faculty. The system aims to efficiently allocate resources, prevent scheduling conflicts, and enhance the overall experience for students during the course registration period.
+            </p>
+        </li>
+        <li>
+            <strong>Quiz Management System</strong><br>
+            <strong>Course: Object Oriented Analysis and Design</strong><br>
+            <p>
+                Quiz Management System is a web-based examination system where quiz is taken through the internet using computer system. Quiz Management System is to take Semester Quizzes in an efficient manner and no time wasting for checking the paper.
+            </p>
+        </li>
+        <li>
+            <strong>Phonebook Management System</strong><br>
+            <strong>Course: Introduction To Programming Lab</strong><br>
+            <strong>Programming Language: C++</strong><br>
+            <p>
+                The Phonebook Management System is designed to efficiently manage and organize contact information. This system will provide users with a centralized platform to store, retrieve, update, and delete contact details.
+            </p>
+        </li>*@
+
+    @foreach (var i in ViewBag.projects)
+    {
+        <li>
+            <strong>@i.project_name</strong><br>
+            <strong>Course: @i.course_name</strong><br>
+            <strong>Programming Language: @i.pl_name</strong><br>
+            <p>
+                @i.project_description
+            </p>
+        </li>
+    }
+
+</ul>

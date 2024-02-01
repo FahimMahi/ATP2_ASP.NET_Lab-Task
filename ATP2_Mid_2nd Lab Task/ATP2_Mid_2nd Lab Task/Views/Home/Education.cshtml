@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Education";
+}
+
+<h2>My Educational Details</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Year</th>
+        <th>Degree</th>
+        <th>Institute</th>
+        <th>CGPA/Grade</th>
+    </tr>
+    @*<tr>
+        <td>2024</td>
+        <td>CSE</td>
+        <td>American International University-Bangladesh (AIUB)</td>
+        <td>3.8</td>
+    </tr>
+    <tr>
+        <td>2019</td>
+        <td>HSC</td>
+        <td>Milestone College</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>2017</td>
+        <td>SSC</td>
+        <td>Cambrian School</td>
+        <td>5.00</td>
+    </tr>*@
+
+    @foreach (var i in ViewBag.Edu) { 
+        <tr>
+            <td>@i.year</td>
+            <td>@i.degree</td>
+            <td>@i.institute</td>
+            <td>@i.grade</td>
+        </tr>
+    }
+</table>
